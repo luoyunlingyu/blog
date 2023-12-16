@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>你的博客</title>
+</head>
+<body>
+    <header>
+        <h1>博客标题</h1>
+        <p>这里是博客描述。</p>
+    </header>
+    <nav>
+        <!-- 如果需要，添加导航链接 -->
+    </nav>
+    <section id="posts-list">
+        <article>
+            <h2>第一篇博客</h2>
+            <p>发表日期：2023年1月1日</p>
+            <div id="post-1-content">
+                <!-- Markdown 转换后的内容将显示在这里 -->
+            </div>
+        </article>
+        <article>
+            <h2>第二篇博客</h2>
+            <p>发表日期：2023年1月5日</p>
+            <div id="post-2-content">
+                <!-- Markdown 转换后的内容将显示在这里 -->
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2023 你的博客。保留所有权利。</p>
+    </footer>
+
+    <!-- 引入marked库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // 获取并渲染 Markdown 内容
+        fetch('your-post-1.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('post-1-content').innerHTML = marked(text);
+            });
+
+        fetch('posts/your-post-2.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('post-2-content').innerHTML = marked(text);
+            });
+    </script>
+</body>
+</html>
+

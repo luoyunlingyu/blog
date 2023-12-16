@@ -1,0 +1,35 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffe6e6; /* Light pink header background color */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #cc0066; /* Dark pink heading color */
+}
+
+nav {
+    /* Add styling for navigation if needed */
+}
+
+section#posts-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for posts section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffe6e6; /* Light pink footer background color */
+}
